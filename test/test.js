@@ -1,5 +1,5 @@
 var fs = require("fs");
-var yazl = require("../");
+var yazl = require("../").create();
 var yauzl = require("yauzl");
 var BufferList = require("bl");
 
