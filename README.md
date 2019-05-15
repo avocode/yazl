@@ -1,6 +1,6 @@
 # yazl
 
-[![Build Status](https://travis-ci.com/avocode/yazl.svg?branch=avocode)](https://travis-ci.com/avocode/yazl)
+[![Build Status](https://travis-ci.org/avocode/yazl.svg?branch=avocode)](https://travis-ci.org/avocode/yazl)
 [![Coverage Status](https://coveralls.io/repos/github/thejoshwolfe/yazl/badge.svg?branch=master)](https://coveralls.io/github/thejoshwolfe/yazl?branch=master)
 
 yet another zip library for node. For unzipping, see
