@@ -6,7 +6,7 @@ function create(options) {
   var zlib = options.zlib || require("zlib");
   var util = options.util || require("util");
   var EventEmitter = options.events || require("events").EventEmitter;
-  var crc32 = require("buffer-crc32").create(options);
+  var crc32 = require("@avocode/buffer-crc32").create(options);
   var stream = options.stream || require('stream')
 
   util.inherits(ZipFile, EventEmitter);

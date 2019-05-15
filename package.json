@@ -25,12 +25,12 @@
   },
   "homepage": "https://github.com/avocode/yazl",
   "dependencies": {
-    "buffer-crc32": "~0.2.3"
+    "@avocode/buffer-crc32": "^0.2.13-avocode"
   },
   "devDependencies": {
     "bl": "~0.9.3",
     "istanbul": "^0.4.5",
-    "yauzl": "~2.3.1"
+    "@avocode/yauzl": "2.10.0-avocode"
   },
   "files": [
     "index.js"

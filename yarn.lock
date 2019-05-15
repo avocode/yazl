@@ -2,6 +2,26 @@
 # yarn lockfile v1
 
 
+"@avocode/buffer-crc32@^0.2.13-avocode", "@avocode/buffer-crc32@~0.2.13-avocode":
+  version "0.2.13-avocode"
+  resolved "https://registry.yarnpkg.com/@avocode/buffer-crc32/-/buffer-crc32-0.2.13-avocode.tgz#87e9b7eb28a6b7151f95ebf542485686fb3649c4"
+  integrity sha512-zMwkRCmHOwyzqZrMuzDFo4LcdaC9KCjPFuDr8usrwdGPsEKXNZW62wOzOQyGkGrg40hns559IsheMATto7aVig==
+
+"@avocode/fd-slicer@~1.1.0-avocode":
+  version "1.1.0-avocode"
+  resolved "https://registry.yarnpkg.com/@avocode/fd-slicer/-/fd-slicer-1.1.0-avocode.tgz#eb75669070e4ce285d2e90d4032882b37036a2dd"
+  integrity sha512-hiPmXqBQ2DaFMoLEaQdjv0Gk8kbbN2xiEMNMa+MkU2UzhMOxP8/O7bzKmCVB+BmKO0W+lrT/C1axtCnBeuY16Q==
+  dependencies:
+    pend "~1.2.0"
+
+"@avocode/yauzl@2.10.0-avocode":
+  version "2.10.0-avocode"
+  resolved "https://registry.yarnpkg.com/@avocode/yauzl/-/yauzl-2.10.0-avocode.tgz#50e635ad6008ddd3043a6854e1394b4aede2d327"
+  integrity sha512-IPE3tOVkOiy5KPGvHD3y3dvrADJg02wVthRz3GYCCz+9tkMP3pNGaPQAUG1AE2X5OFHTM2ifMgH7dWpibP160w==
+  dependencies:
+    "@avocode/buffer-crc32" "~0.2.13-avocode"
+    "@avocode/fd-slicer" "~1.1.0-avocode"
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
@@ -48,11 +68,6 @@ brace-expansion@^1.1.7:
   dependencies:
     balanced-match "^1.0.0"
     concat-map "0.0.1"
-
-buffer-crc32@~0.2.3:
-  version "0.2.13"
-  resolved "https://registry.yarnpkg.com/buffer-crc32/-/buffer-crc32-0.2.13.tgz#0d333e3f00eac50aa1454abd30ef8c2a5d9a7242"
-  integrity sha1-DTM+PwDqxQqhRUq9MO+MKl2ackI=
 
 commander@~2.20.0:
   version "2.20.0"
@@ -110,13 +125,6 @@ fast-levenshtein@~2.0.4:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
   integrity sha1-PYpcZog6FqMMqGQ+hR8Zuqd5eRc=
-
-fd-slicer@~1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/fd-slicer/-/fd-slicer-1.0.1.tgz#8b5bcbd9ec327c5041bf9ab023fd6750f1177e65"
-  integrity sha1-i1vL2ewyfFBBv5qwI/1nUPEXfmU=
-  dependencies:
-    pend "~1.2.0"
 
 glob@^5.0.15:
   version "5.0.15"
@@ -362,11 +370,3 @@ wrappy@1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
   integrity sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=
-
-yauzl@~2.3.1:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/yauzl/-/yauzl-2.3.1.tgz#6707fe2b6a4dac9445cc429bf04a11c7dedfa36a"
-  integrity sha1-Zwf+K2pNrJRFzEKb8EoRx97fo2o=
-  dependencies:
-    fd-slicer "~1.0.1"
-    pend "~1.2.0"

@@ -1,6 +1,6 @@
 var fs = require("fs");
 var yazl = require("../").create();
-var yauzl = require("yauzl");
+var yauzl = require("@avocode/yauzl").create();
 var BufferList = require("bl");
 
 (function() {
