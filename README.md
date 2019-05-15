@@ -4,7 +4,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/thejoshwolfe/yazl/badge.svg?branch=master)](https://coveralls.io/github/thejoshwolfe/yazl?branch=master)
 
 yet another zip library for node. For unzipping, see
-[yauzl](https://github.com/thejoshwolfe/yauzl).
+[@avocode/yauzl](https://github.com/avocode/yauzl).
 
 Design principles:
 
@@ -16,10 +16,20 @@ Design principles:
    This is slightly suboptimal for time performance,
    but avoids OS-imposed limits on the number of simultaneously open file handles.
 
+## Avocode fork :warning:
+
+This forks wraps the existing implementation to a factory `create` method, which accepts node services and dependencies to be used over the ones that are packaged. This will enable us to pass limited `fs` implementation when we restrict `fs` usage in node. This will also enable us to replace node implementation with something that works on web. We're also loading the dependencies lazily. This means a web app using this will not fail during build time, which can be useful in come cases.
+
+Part of this lazification of yazl are the following forks:
+- [yazl](https://github.com/thejoshwolfe/yazl) -> [@avocode/yazl](https://github.com/avocode/yazl) obviously
+- [yazul](https://github.com/thejoshwolfe/yauzl) -> [@avocode/yauzl](https://github.com/avocode/yauzl)
+- [fs-sicer](https://github.com/andrewrk/node-fd-slicer) -> [@avocode/fs-slicer](https://github.com/avocode/node-fd-slicer)
+- [buffer-crc32](https://github.com/brianloveswords/buffer-crc32) -> [@avocode/buffer-crc32](https://github.com/avocode/buffer-crc32)
+
 ## Usage
 
 ```js
-var yazl = require("yazl");
+var yazl = require("yazl").create();
 
 var zipfile = new yazl.ZipFile();
 zipfile.addFile("file1.txt", "file1.txt");
