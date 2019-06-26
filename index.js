@@ -5,6 +5,7 @@ function create(options) {
   var fs = options.fs || require("fs");
   var zlib = options.zlib || require("zlib");
   var util = options.util || require("util");
+  var Buffer = options.Buffer || Buffer;
   var EventEmitter = options.events || require("events").EventEmitter;
   var crc32 = require("@avocode/buffer-crc32").create(options);
   var stream = options.stream || require('stream')
